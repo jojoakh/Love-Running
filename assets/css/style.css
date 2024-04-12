@@ -1,5 +1,6 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
@@ -14,7 +15,7 @@ body {
     flex-direction: column;
     /* Generic project styles */
     color: #3a3a3a;
-    font-family: 'lato' , sans-serif;
+    font-family: 'lato', sans-serif;
 }
 
 /* header */
@@ -26,30 +27,36 @@ header {
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: baseline;
 }
+
 header a {
     text-decoration: none;
     color: inherit;
 }
+
 h1 {
-    font-family: 'oswald' , sans-serif;
+    font-family: 'oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
+
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
-#menu > li {
+
+#menu>li {
     margin-bottom: 1em;
 }
+
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
+
 /* Navbar styles with dropdown toggles */
 nav {
     position: absolute;
@@ -61,41 +68,54 @@ nav {
     display: none;
     top: 100%;
 }
+
 /* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
+
 #nav-toggle {
     display: none;
 }
+
 .nav-toggle-label {
     font-size: 2rem;
 }
+
 /* main */
 main {
-    background-color: lightblue;
-/* make main element take up any surplus space to push footer down */
+    /* make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
+/* Hero section */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+}
+
 /* footer */
 footer {
-   #social-networks {
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-   }
-   #social-networks i {
-    font-size: 160%;
-    padding: 5%;
-    color: #3a3a3a;
-   }
-} 
+    #social-networks {
+        text-align: center;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+
+    #social-networks i {
+        font-size: 160%;
+        padding: 5%;
+        color: #3a3a3a;
+    }
+}
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* header */
     nav {
         display: block;
@@ -104,30 +124,36 @@ footer {
         width: fit-content;
         padding-right: 1rem;
     }
+
     #menu {
         display: flex;
     }
-    #menu > li {
+
+    #menu>li {
         padding-left: 1rem;
     }
+
     .nav-toggle-label {
         display: none;
     }
+
     #logo {
         font-size: 200%;
         line-height: 75px;
         margin: o o.5rem;
     }
+
     /* Main content */
     main {
         /* Push main content down to accomodate larger header */
         margin-top: 79px;
     }
 }
+
 /* Larger devices (laptop and destops, 992px and up) */
 @media screen and (min-width: 992px) {
-#menu a:hover {
-    border-bottom: 1px solid #3a3a3a;
-}
-    
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
+
 }
